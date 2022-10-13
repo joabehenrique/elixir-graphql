@@ -42,29 +42,51 @@ To install Project, follow these steps:
 
 To use Project, follow these steps:
 
-```
-Project is 
-```
-
-Getting a 
+Getting a user
 
 ```
-(GET) api/v2
-```
-
-Creating a 
-
-```
-(POST) api/v2
-
+query{
+  user(id: 1){
+    id,
+    name,
+    email
+  }
+}
 
 ```
 
-Changing a 
+Creating a user
 
 ```
-(PUT) api/v1/
+mutation{
+  createUser(input: {
+    name: "Joabe",
+    email: "jobe@hotmail.com"
+    }){
+      id,
+      name,
+      email
+    }
+}
 
+```
+
+Creating a meal
+
+```
+mutation{
+  createMeal(input: {
+    calories: 3.4,
+    category: DRINK, 
+    description: "coca-cola", 
+    userId: 1
+    }){
+      calories,
+      id,
+      category,
+      description
+    }
+}
 
 ```
 
